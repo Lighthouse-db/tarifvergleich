@@ -15,32 +15,39 @@
       color: #222;
       margin: 0;
     }
+
     header, footer {
       background-color: #002244;
       color: white;
       text-align: center;
       padding: 2.5rem 1rem;
     }
+
     header h1 {
       font-size: 2.5rem;
     }
+
     main {
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
+
     h1 {
       color: white;
     }
+
     h2 {
       color: black;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
+
     .card-link {
       display: block;
       height: 200px;
@@ -51,7 +58,6 @@
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
       color: white;
       position: relative;
       display: flex;
@@ -62,67 +68,90 @@
       font-size: 2.5rem;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
       background-color: #333;
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
-    .card-strom       { background-image: url('img/strom.png'); }
-    .card-gas         { background-image: url('img/gas.png'); }
-    .card-internet    { background-image: url('img/internet.png'); }
-    .card-kredit      { background-image: url('img/kredit.png'); }
-    .card-versicherung{ background-image: url('img/versicherung.png'); }
+
+    .card-link::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease;
+      border-radius: 10px;
+      z-index: 0;
+    }
 
     .card-link:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px) scale(1.02);
     }
+
+    .card-link:hover::before {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .card-link span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-strom        { background-image: url('img/strom.png'); }
+    .card-gas          { background-image: url('img/gas.png'); }
+    .card-internet     { background-image: url('img/internet.png'); }
+    .card-kredit       { background-image: url('img/kredit.png'); }
+    .card-versicherung { background-image: url('img/versicherung.png'); }
+
     section {
       margin-top: 3rem;
     }
   </style>
 </head>
 <body>
-<header>
-  <h1>✅ Jetzt Anbieter vergleichen, wechseln & dauerhaft sparen</h1>
-  <p>Kostenlos – unabhängig – transparent</p>
-</header>
-<main>
-  <div class="grid">
-    <a href="strom/index.html" class="card-link card-strom"><span>⚡ Strom</span></a>
-    <a href="gas/index.html" class="card-link card-gas"><span>🔥 Gas</span></a>
-    <a href="internet/index.html" class="card-link card-internet"><span>🌐 Internet</span></a>
-    <a href="kredit/index.html" class="card-link card-kredit"><span>💶 Kredit</span></a>
-    <a href="versicherung/index.html" class="card-link card-versicherung"><span>🛡️ Versicherung</span></a>
-  </div>
+  <header>
+    <h1>✅ Jetzt Anbieter vergleichen, wechseln & dauerhaft sparen</h1>
+    <p>Kostenlos – unabhängig – transparent</p>
+  </header>
+  <main>
+    <div class="grid">
+      <a href="strom/index.html" class="card-link card-strom"><span>⚡ Strom</span></a>
+      <a href="gas/index.html" class="card-link card-gas"><span>🔥 Gas</span></a>
+      <a href="internet/index.html" class="card-link card-internet"><span>🌐 Internet</span></a>
+      <a href="kredit/index.html" class="card-link card-kredit"><span>💶 Kredit</span></a>
+      <a href="versicherung/index.html" class="card-link card-versicherung"><span>🛡️ Versicherung</span></a>
+    </div>
 
-  <section>
-    <h2>🌟 Deine Vorteile auf einen Blick</h2>
-    <ul>
-      <li>Bis zu 800 € sparen – jedes Jahr durch einen Anbieterwechsel</li>
-      <li>100 % kostenlos & unabhängig – keine versteckten Kosten</li>
-      <li>In nur wenigen Minuten wechseln – ganz ohne Aufwand</li>
-      <li>Exklusive Online-Tarife & Wechselboni – sofort profitieren</li>
-    </ul>
-  </section>
+    <section>
+      <h2>🌟 Deine Vorteile auf einen Blick</h2>
+      <ul>
+        <li>Bis zu 800 € sparen – jedes Jahr durch einen Anbieterwechsel</li>
+        <li>100 % kostenlos & unabhängig – keine versteckten Kosten</li>
+        <li>In nur wenigen Minuten wechseln – ganz ohne Aufwand</li>
+        <li>Exklusive Online-Tarife & Wechselboni – sofort profitieren</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>🔍 Warum ein Tarifvergleich?</h2>
-    <p>Die Preise für Strom, Gas, Internet, Kredite und Versicherungen ändern sich regelmäßig. Wer die Anbieter vergleicht, kann oft mehrere Hundert Euro im Jahr sparen – vor allem als Neukunde. Auch bei Krediten und Versicherungen lohnt sich ein Blick auf aktuelle Konditionen: Zinssätze, Leistungen und Prämien variieren stark.</p>
-  </section>
+    <section>
+      <h2>🔍 Warum ein Tarifvergleich?</h2>
+      <p>Die Preise für Strom, Gas, Internet, Kredite und Versicherungen ändern sich regelmäßig. Wer die Anbieter vergleicht, kann oft mehrere Hundert Euro im Jahr sparen – vor allem als Neukunde. Auch bei Krediten und Versicherungen lohnt sich ein Blick auf aktuelle Konditionen: Zinssätze, Leistungen und Prämien variieren stark.</p>
+    </section>
 
-  <section>
-    <h2>⚙️ So funktioniert der Vergleich</h2>
-    <ul>
-      <li>Kategorie wählen (z. B. Strom, Gas, Internet, Kredit oder Versicherung)</li>
-      <li>Daten eingeben – z. B. Verbrauch, Wohnort oder gewünschte Laufzeit</li>
-      <li>Angebote vergleichen – unsere Partner (Check24, Tarifcheck) zeigen dir blitzschnell die besten Tarife</li>
-      <li>Direkt online wechseln – TÜV-geprüft, sicher & unverbindlich</li>
-    </ul>
-  </section>
+    <section>
+      <h2>⚙️ So funktioniert der Vergleich</h2>
+      <ul>
+        <li>Kategorie wählen (z. B. Strom, Gas, Internet, Kredit oder Versicherung)</li>
+        <li>Daten eingeben – z. B. Verbrauch, Wohnort oder gewünschte Laufzeit</li>
+        <li>Angebote vergleichen – unsere Partner (Check24, Tarifcheck) zeigen dir blitzschnell die besten Tarife</li>
+        <li>Direkt online wechseln – TÜV-geprüft, sicher & unverbindlich</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>🚀 Jetzt starten & sparen</h2>
-    <p>Egal ob Haushalt oder Finanzen – finde mit wenigen Klicks den passenden Tarif. Wähle oben dein Thema und entdecke die besten Angebote für deine Bedürfnisse.</p>
-  </section>
-</main>
-<footer>
-  <p>&copy; 2025 Lighthouse Individual</p>
-</footer>
+    <section>
+      <h2>🚀 Jetzt starten & sparen</h2>
+      <p>Egal ob Haushalt oder Finanzen – finde mit wenigen Klicks den passenden Tarif. Wähle oben dein Thema und entdecke die besten Angebote für deine Bedürfnisse.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Lighthouse Individual</p>
+  </footer>
 </body>
 </html>
