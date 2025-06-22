@@ -29,14 +29,12 @@
       margin: 3rem auto;
       padding: 0 1rem;
     }
-      h1 {
-      color: rgb(255, 255, 255);
+    h1 {
+      color: white;
     }
-
-      h2 {
-      color: rgb(0, 0, 0);
+    h2 {
+      color: black;
     }
-    
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -46,7 +44,7 @@
     .card-link {
       display: block;
       height: 200px;
-      background-size: cover !important;
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       padding: 2rem;
@@ -63,15 +61,14 @@
       font-weight: bold;
       font-size: 2.5rem;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-      background-color: #333; /* Fallback-Hintergrundfarbe */
+      background-color: #333;
     }
-    .card-link::before {
-      display: none;
-    }
-    .card-link span {
-      position: relative;
-      z-index: 1;
-    }
+    .card-strom       { background-image: url('img/strom.png'); }
+    .card-gas         { background-image: url('img/gas.png'); }
+    .card-internet    { background-image: url('img/internet.png'); }
+    .card-kredit      { background-image: url('img/kredit.png'); }
+    .card-versicherung{ background-image: url('img/versicherung.png'); }
+
     .card-link:hover {
       transform: translateY(-4px);
     }
@@ -87,11 +84,11 @@
 </header>
 <main>
   <div class="grid">
-    <a href="strom/index.html" class="card-link" style="background-image: url('img/strom.png');"><span>⚡ Strom</span></a>
-    <a href="gas/index.html" class="card-link" style="background-image: url('img/gas.png');"><span>🔥 Gas</span></a>
-    <a href="internet/index.html" class="card-link" style="background-image: url('img/internet.png');"><span>🌐 Internet</span></a>
-    <a href="kredit/index.html" class="card-link" style="background-image: url('img/kredit.png');"><span>💶 Kredit</span></a>
-    <a href="versicherung/index.html" class="card-link" style="background-image: url('img/versicherung.png');"><span>🛡️ Versicherung</span></a>
+    <a href="strom/index.html" class="card-link card-strom"><span>⚡ Strom</span></a>
+    <a href="gas/index.html" class="card-link card-gas"><span>🔥 Gas</span></a>
+    <a href="internet/index.html" class="card-link card-internet"><span>🌐 Internet</span></a>
+    <a href="kredit/index.html" class="card-link card-kredit"><span>💶 Kredit</span></a>
+    <a href="versicherung/index.html" class="card-link card-versicherung"><span>🛡️ Versicherung</span></a>
   </div>
 
   <section>
