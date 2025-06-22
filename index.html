@@ -36,12 +36,27 @@
       margin-top: 2rem;
     }
     .card {
-      background: #fff;
+      background-size: cover;
+      background-position: center;
       padding: 2rem;
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       transition: transform 0.2s ease;
+      color: white;
+      position: relative;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      z-index: 0;
+    }
+    .card > * {
+      position: relative;
+      z-index: 1;
     }
     .card:hover {
       transform: translateY(-4px);
@@ -49,8 +64,9 @@
     .card a {
       text-decoration: none;
       font-weight: bold;
-      color: #002244;
+      color: white;
       font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
     section {
       margin-top: 3rem;
@@ -64,11 +80,11 @@
 </header>
 <main>
   <div class="grid">
-    <div class="card"><a href="strom/index.html">⚡ Strom</a></div>
-    <div class="card"><a href="gas/index.html">🔥 Gas</a></div>
-    <div class="card"><a href="internet/index.html">🌐 Internet</a></div>
-    <div class="card"><a href="kredit/index.html">💶 Kredit</a></div>
-    <div class="card"><a href="versicherung/index.html">🛡️ Versicherung</a></div>
+    <div class="card" style="background-image: url('bilder/strom.png');"><a href="strom/index.html">⚡ Strom</a></div>
+    <div class="card" style="background-image: url('bilder/gas.png');"><a href="gas/index.html">🔥 Gas</a></div>
+    <div class="card" style="background-image: url('bilder/internet.png');"><a href="internet/index.html">🌐 Internet</a></div>
+    <div class="card" style="background-image: url('bilder/kredit.png');"><a href="kredit/index.html">💶 Kredit</a></div>
+    <div class="card" style="background-image: url('bilder/versicherung.png');"><a href="versicherung/index.html">🛡️ Versicherung</a></div>
   </div>
 
   <section>
