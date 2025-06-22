@@ -38,10 +38,11 @@
       gap: 2rem;
       margin-top: 2rem;
     }
-    .card {
+    .card-link {
+      display: block;
+      height: 200px;
       background-size: cover;
       background-position: center;
-      height: 200px;
       padding: 2rem;
       border-radius: 10px;
       text-align: center;
@@ -52,8 +53,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.6rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
-    .card::before {
+    .card-link::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -61,19 +66,12 @@
       border-radius: 10px;
       z-index: 0;
     }
-    .card > * {
+    .card-link span {
       position: relative;
       z-index: 1;
     }
-    .card:hover {
+    .card-link:hover {
       transform: translateY(-4px);
-    }
-    .card a {
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
-      font-size: 1.6rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
     section {
       margin-top: 3rem;
@@ -87,11 +85,11 @@
 </header>
 <main>
   <div class="grid">
-    <div class="card" style="background-image: url('bilder/strom.png');"><a href="strom/index.html">⚡ Strom</a></div>
-    <div class="card" style="background-image: url('bilder/gas.png');"><a href="gas/index.html">🔥 Gas</a></div>
-    <div class="card" style="background-image: url('bilder/internet.png');"><a href="internet/index.html">🌐 Internet</a></div>
-    <div class="card" style="background-image: url('bilder/kredit.png');"><a href="kredit/index.html">💶 Kredit</a></div>
-    <div class="card" style="background-image: url('bilder/versicherung.png');"><a href="versicherung/index.html">🛡️ Versicherung</a></div>
+    <a href="strom/index.html" class="card-link" style="background-image: url('bilder/strom.png');"><span>⚡ Strom</span></a>
+    <a href="gas/index.html" class="card-link" style="background-image: url('bilder/gas.png');"><span>🔥 Gas</span></a>
+    <a href="internet/index.html" class="card-link" style="background-image: url('bilder/internet.png');"><span>🌐 Internet</span></a>
+    <a href="kredit/index.html" class="card-link" style="background-image: url('bilder/kredit.png');"><span>💶 Kredit</span></a>
+    <a href="versicherung/index.html" class="card-link" style="background-image: url('bilder/versicherung.png');"><span>🛡️ Versicherung</span></a>
   </div>
 
   <section>
