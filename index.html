@@ -21,6 +21,9 @@
       text-align: center;
       padding: 2.5rem 1rem;
     }
+    header h1 {
+      font-size: 2.5rem;
+    }
     main {
       max-width: 1000px;
       margin: 3rem auto;
@@ -35,36 +38,43 @@
       gap: 2rem;
       margin-top: 2rem;
     }
-     .card {
-    position: relative;
-    height: 200px; /* Höhe der Kachel */
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    overflow: hidden;
-  }
-  .card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 0;
-  }
-  .card a {
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-  }
+    .card {
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      color: white;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      z-index: 0;
+    }
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 1.6rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
     section {
       margin-top: 3rem;
     }
@@ -72,11 +82,11 @@
 </head>
 <body>
 <header>
-  <h1>Tarifvergleich – Strom, Gas, Internet, Kredit & Versicherung</h1>
-  <p>Jetzt Anbieter vergleichen, wechseln und dauerhaft sparen – kostenlos & transparent</p>
+  <h1>✅ Jetzt Anbieter vergleichen, wechseln & dauerhaft sparen</h1>
+  <p>Kostenlos – unabhängig – transparent</p>
 </header>
 <main>
-   <div class="grid">
+  <div class="grid">
     <div class="card" style="background-image: url('bilder/strom.png');"><a href="strom/index.html">⚡ Strom</a></div>
     <div class="card" style="background-image: url('bilder/gas.png');"><a href="gas/index.html">🔥 Gas</a></div>
     <div class="card" style="background-image: url('bilder/internet.png');"><a href="internet/index.html">🌐 Internet</a></div>
@@ -85,28 +95,33 @@
   </div>
 
   <section>
-    <h2>Warum Tarifvergleich?</h2>
-    <p>Ein regelmäßiger Tarifvergleich spart bares Geld. Strom-, Gas- und Internetanbieter ändern regelmäßig ihre Konditionen – davon können besonders Neukunden profitieren. Auch bei Krediten und Versicherungen lohnt sich ein Vergleich: Zinsen, Prämien und Leistungen variieren stark je nach Anbieter und Tarif.</p>
-  </section>
-
-  <section>
-    <h2>So funktioniert der Vergleich</h2>
-    <p>Wählen Sie einfach die passende Kategorie und geben Sie Ihre individuellen Daten ein – z. B. Verbrauch, Wohnort oder Wunschrate. Unsere Partnerportale (Check24, Tarifcheck) liefern Ihnen sekundenschnell einen transparenten Vergleich mit direkten Wechselmöglichkeiten – TÜV-geprüft & unverbindlich.</p>
-  </section>
-
-  <section>
-    <h2>Ihre Vorteile auf einen Blick</h2>
+    <h2>🌟 Deine Vorteile auf einen Blick</h2>
     <ul>
-      <li>✔️ Bis zu 800 € jährlich sparen durch Anbieterwechsel</li>
-      <li>✔️ 100 % kostenloser & unabhängiger Vergleich</li>
-      <li>✔️ Anbieterwechsel in wenigen Minuten</li>
-      <li>✔️ Exklusive Online-Tarife & Wechselboni</li>
+      <li>Bis zu 800 € sparen – jedes Jahr durch einen Anbieterwechsel</li>
+      <li>100 % kostenlos & unabhängig – keine versteckten Kosten</li>
+      <li>In nur wenigen Minuten wechseln – ganz ohne Aufwand</li>
+      <li>Exklusive Online-Tarife & Wechselboni – sofort profitieren</li>
     </ul>
   </section>
 
   <section>
-    <h2>Jetzt starten & sparen</h2>
-    <p>Ob Strom, Gas, Internet, Kredit oder Versicherung – starten Sie jetzt mit Ihrem Vergleich und holen Sie sich den besten Tarif für Ihre Bedürfnisse!</p>
+    <h2>🔍 Warum ein Tarifvergleich?</h2>
+    <p>Die Preise für Strom, Gas, Internet, Kredite und Versicherungen ändern sich regelmäßig. Wer die Anbieter vergleicht, kann oft mehrere Hundert Euro im Jahr sparen – vor allem als Neukunde. Auch bei Krediten und Versicherungen lohnt sich ein Blick auf aktuelle Konditionen: Zinssätze, Leistungen und Prämien variieren stark.</p>
+  </section>
+
+  <section>
+    <h2>⚙️ So funktioniert der Vergleich</h2>
+    <ul>
+      <li>Kategorie wählen (z. B. Strom, Gas, Internet, Kredit oder Versicherung)</li>
+      <li>Daten eingeben – z. B. Verbrauch, Wohnort oder gewünschte Laufzeit</li>
+      <li>Angebote vergleichen – unsere Partner (Check24, Tarifcheck) zeigen dir blitzschnell die besten Tarife</li>
+      <li>Direkt online wechseln – TÜV-geprüft, sicher & unverbindlich</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🚀 Jetzt starten & sparen</h2>
+    <p>Egal ob Haushalt oder Finanzen – finde mit wenigen Klicks den passenden Tarif. Wähle oben dein Thema und entdecke die besten Angebote für deine Bedürfnisse.</p>
   </section>
 </main>
 <footer>
