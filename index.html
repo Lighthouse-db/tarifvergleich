@@ -35,39 +35,36 @@
       gap: 2rem;
       margin-top: 2rem;
     }
-    .card {
-      background-size: cover;
-      background-position: center;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-      color: white;
-      position: relative;
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 10px;
-      z-index: 0;
-    }
-    .card > * {
-      position: relative;
-      z-index: 1;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card a {
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
-      font-size: 1.2rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    }
+     .card {
+    position: relative;
+    height: 200px; /* Höhe der Kachel */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+  .card a {
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  }
     section {
       margin-top: 3rem;
     }
@@ -79,7 +76,7 @@
   <p>Jetzt Anbieter vergleichen, wechseln und dauerhaft sparen – kostenlos & transparent</p>
 </header>
 <main>
-  <div class="grid">
+   <div class="grid">
     <div class="card" style="background-image: url('bilder/strom.png');"><a href="strom/index.html">⚡ Strom</a></div>
     <div class="card" style="background-image: url('bilder/gas.png');"><a href="gas/index.html">🔥 Gas</a></div>
     <div class="card" style="background-image: url('bilder/internet.png');"><a href="internet/index.html">🌐 Internet</a></div>
